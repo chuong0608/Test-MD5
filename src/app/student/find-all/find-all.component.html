@@ -1,0 +1,20 @@
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Description</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody *ngFor="let student of student">
+  <tr>
+    <th scope="row">1</th>
+      <td><a [routerLink]="['/student-detail', student.id]">{{student.name}}</a></td>
+    <td>{{student.description}}</td>
+    <td>{{student.action}}</td>
+    <td><button  [routerLink]="['edit/',student.id]">Edit</button>
+      <button type="submit" class="btn btn-outline-danger" (click)="deleteStudent(student.id)">Delete</button></td>
+  </tr>
+  </tbody>
+</table>

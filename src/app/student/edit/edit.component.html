@@ -1,0 +1,9 @@
+<!-- Modal -->
+<form [formGroup]="form" (submit)="update()">
+  <input type="hidden" class="form-control" formControlName="id" >
+  <input type="text" class="form-control" formControlName="name" placeholder="Name" >
+  <input type="text" class="form-control" formControlName="description" placeholder="description" >
+  <input type="text" class="form-control" formControlName="action" placeholder="action" >
+  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+  <button type="submit" class="btn btn-primary" name="submit" >Edit</button>
+</form>
